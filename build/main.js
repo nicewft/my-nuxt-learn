@@ -142,8 +142,8 @@ module.exports = {
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_D_lwproduct_koa_study_my_nuxt_learn_node_modules_babel_runtime_6_26_0_babel_runtime_regenerator__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_D_lwproduct_koa_study_my_nuxt_learn_node_modules_babel_runtime_6_26_0_babel_runtime_regenerator___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_D_lwproduct_koa_study_my_nuxt_learn_node_modules_babel_runtime_6_26_0_babel_runtime_regenerator__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_D_my_nuxt_learn_node_modules_babel_runtime_6_26_0_babel_runtime_regenerator__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_D_my_nuxt_learn_node_modules_babel_runtime_6_26_0_babel_runtime_regenerator___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_D_my_nuxt_learn_node_modules_babel_runtime_6_26_0_babel_runtime_regenerator__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_koa_router__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_koa_router___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_koa_router__);
 
@@ -159,8 +159,8 @@ var router = new __WEBPACK_IMPORTED_MODULE_1_koa_router___default.a({
 });
 
 router.get('/getCitys', function () {
-  var _ref = _asyncToGenerator( /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_D_lwproduct_koa_study_my_nuxt_learn_node_modules_babel_runtime_6_26_0_babel_runtime_regenerator___default.a.mark(function _callee(ctx) {
-    return __WEBPACK_IMPORTED_MODULE_0_D_lwproduct_koa_study_my_nuxt_learn_node_modules_babel_runtime_6_26_0_babel_runtime_regenerator___default.a.wrap(function _callee$(_context) {
+  var _ref = _asyncToGenerator( /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_D_my_nuxt_learn_node_modules_babel_runtime_6_26_0_babel_runtime_regenerator___default.a.mark(function _callee(ctx) {
+    return __WEBPACK_IMPORTED_MODULE_0_D_my_nuxt_learn_node_modules_babel_runtime_6_26_0_babel_runtime_regenerator___default.a.wrap(function _callee$(_context) {
       while (1) {
         switch (_context.prev = _context.next) {
           case 0:
@@ -188,8 +188,8 @@ router.get('/getCitys', function () {
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_D_lwproduct_koa_study_my_nuxt_learn_node_modules_babel_runtime_6_26_0_babel_runtime_regenerator__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_D_lwproduct_koa_study_my_nuxt_learn_node_modules_babel_runtime_6_26_0_babel_runtime_regenerator___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_D_lwproduct_koa_study_my_nuxt_learn_node_modules_babel_runtime_6_26_0_babel_runtime_regenerator__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_D_my_nuxt_learn_node_modules_babel_runtime_6_26_0_babel_runtime_regenerator__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_D_my_nuxt_learn_node_modules_babel_runtime_6_26_0_babel_runtime_regenerator___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_D_my_nuxt_learn_node_modules_babel_runtime_6_26_0_babel_runtime_regenerator__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_koa_router__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_koa_router___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_koa_router__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__models_user__ = __webpack_require__(10);
@@ -209,16 +209,19 @@ var router = new __WEBPACK_IMPORTED_MODULE_1_koa_router___default.a({
 
 // 新增
 router.post('/addUser', function () {
-  var _ref = _asyncToGenerator( /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_D_lwproduct_koa_study_my_nuxt_learn_node_modules_babel_runtime_6_26_0_babel_runtime_regenerator___default.a.mark(function _callee(ctx) {
+  var _ref = _asyncToGenerator( /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_D_my_nuxt_learn_node_modules_babel_runtime_6_26_0_babel_runtime_regenerator___default.a.mark(function _callee(ctx) {
     var userName, age, code, success, user;
-    return __WEBPACK_IMPORTED_MODULE_0_D_lwproduct_koa_study_my_nuxt_learn_node_modules_babel_runtime_6_26_0_babel_runtime_regenerator___default.a.wrap(function _callee$(_context) {
+    return __WEBPACK_IMPORTED_MODULE_0_D_my_nuxt_learn_node_modules_babel_runtime_6_26_0_babel_runtime_regenerator___default.a.wrap(function _callee$(_context) {
       while (1) {
         switch (_context.prev = _context.next) {
           case 0:
             userName = ctx.request.body.userName;
             age = ctx.request.body.age;
             code = void 0, success = void 0;
-            user = new __WEBPACK_IMPORTED_MODULE_2__models_user__["a" /* default */]({ userName: userName, age: age });
+            user = new __WEBPACK_IMPORTED_MODULE_2__models_user__["a" /* default */]({
+              userName: userName,
+              age: age
+            });
             _context.prev = 4;
             _context.next = 7;
             return user.save();
@@ -257,9 +260,9 @@ router.post('/addUser', function () {
 
 // 查询
 router.get('/getUser', function () {
-  var _ref2 = _asyncToGenerator( /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_D_lwproduct_koa_study_my_nuxt_learn_node_modules_babel_runtime_6_26_0_babel_runtime_regenerator___default.a.mark(function _callee2(ctx) {
+  var _ref2 = _asyncToGenerator( /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_D_my_nuxt_learn_node_modules_babel_runtime_6_26_0_babel_runtime_regenerator___default.a.mark(function _callee2(ctx) {
     var code, result;
-    return __WEBPACK_IMPORTED_MODULE_0_D_lwproduct_koa_study_my_nuxt_learn_node_modules_babel_runtime_6_26_0_babel_runtime_regenerator___default.a.wrap(function _callee2$(_context2) {
+    return __WEBPACK_IMPORTED_MODULE_0_D_my_nuxt_learn_node_modules_babel_runtime_6_26_0_babel_runtime_regenerator___default.a.wrap(function _callee2$(_context2) {
       while (1) {
         switch (_context2.prev = _context2.next) {
           case 0:
@@ -303,9 +306,9 @@ router.get('/getUser', function () {
 
 // 删除
 router.post('/removeUser', function () {
-  var _ref3 = _asyncToGenerator( /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_D_lwproduct_koa_study_my_nuxt_learn_node_modules_babel_runtime_6_26_0_babel_runtime_regenerator___default.a.mark(function _callee3(ctx) {
+  var _ref3 = _asyncToGenerator( /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_D_my_nuxt_learn_node_modules_babel_runtime_6_26_0_babel_runtime_regenerator___default.a.mark(function _callee3(ctx) {
     var userName, id, code;
-    return __WEBPACK_IMPORTED_MODULE_0_D_lwproduct_koa_study_my_nuxt_learn_node_modules_babel_runtime_6_26_0_babel_runtime_regenerator___default.a.wrap(function _callee3$(_context3) {
+    return __WEBPACK_IMPORTED_MODULE_0_D_my_nuxt_learn_node_modules_babel_runtime_6_26_0_babel_runtime_regenerator___default.a.wrap(function _callee3$(_context3) {
       while (1) {
         switch (_context3.prev = _context3.next) {
           case 0:
@@ -397,8 +400,8 @@ module.exports = require("regenerator-runtime");
 
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_D_lwproduct_koa_study_my_nuxt_learn_node_modules_babel_runtime_6_26_0_babel_runtime_regenerator__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_D_lwproduct_koa_study_my_nuxt_learn_node_modules_babel_runtime_6_26_0_babel_runtime_regenerator___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_D_lwproduct_koa_study_my_nuxt_learn_node_modules_babel_runtime_6_26_0_babel_runtime_regenerator__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_D_my_nuxt_learn_node_modules_babel_runtime_6_26_0_babel_runtime_regenerator__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_D_my_nuxt_learn_node_modules_babel_runtime_6_26_0_babel_runtime_regenerator___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_D_my_nuxt_learn_node_modules_babel_runtime_6_26_0_babel_runtime_regenerator__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_koa__ = __webpack_require__(7);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_koa___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_koa__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_nuxt__ = __webpack_require__(9);
@@ -413,9 +416,9 @@ Object.defineProperty(exports, "__esModule", { value: true });
 
 
 var start = function () {
-  var _ref = _asyncToGenerator( /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_D_lwproduct_koa_study_my_nuxt_learn_node_modules_babel_runtime_6_26_0_babel_runtime_regenerator___default.a.mark(function _callee() {
+  var _ref = _asyncToGenerator( /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_D_my_nuxt_learn_node_modules_babel_runtime_6_26_0_babel_runtime_regenerator___default.a.mark(function _callee() {
     var app, host, port, config, nuxt, builder;
-    return __WEBPACK_IMPORTED_MODULE_0_D_lwproduct_koa_study_my_nuxt_learn_node_modules_babel_runtime_6_26_0_babel_runtime_regenerator___default.a.wrap(function _callee$(_context) {
+    return __WEBPACK_IMPORTED_MODULE_0_D_my_nuxt_learn_node_modules_babel_runtime_6_26_0_babel_runtime_regenerator___default.a.wrap(function _callee$(_context) {
       while (1) {
         switch (_context.prev = _context.next) {
           case 0:

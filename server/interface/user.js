@@ -11,12 +11,15 @@ router.post('/addUser', async ctx => {
   let userName = ctx.request.body.userName
   let age = ctx.request.body.age
   let code, success
-  let user = new User({userName: userName, age: age})
+  let user = new User({
+    userName: userName,
+    age: age
+  })
   try {
     await user.save()
     code = 0
     success = 'ok'
-  } catch(e) {
+  } catch (e) {
     code = -1
     success = e
   }
@@ -54,9 +57,9 @@ router.post('/removeUser', async ctx => {
       // userName: userName
       _id: id
     }).remove()
-    code=0
+    code = 0
   } catch (e) {
-    code=-1
+    code = -1
   }
   ctx.body = {
     code
