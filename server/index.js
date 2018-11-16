@@ -1,6 +1,10 @@
 import Koa from 'koa'
 import { Nuxt, Builder } from 'nuxt'
+import mongoose from 'mongoose'
+import bodyparser from 'koa-bodyparser'
+import dbConfig from './config/index'
 import cityInterface from './interface/city'
+import userInterface from './interface/user'
 
 async function start() {
   const app = new Koa()
@@ -19,8 +23,11 @@ async function start() {
     const builder = new Builder(nuxt)
     await builder.build()
   }
-
+  app.use(bodyparser({
+    enableTypes:['json', 'form', 'text']
+  }))
   app.use(cityInterface.routes()).use(cityInterface.allowedMethods())
+  app.use(userInterface.routes()).use(userInterface.allowedMethods())
   app.use(ctx => {
     ctx.status = 200
     ctx.respond = false // Mark request as handled for Koa
@@ -28,6 +35,9 @@ async function start() {
     nuxt.render(ctx.req, ctx.res)
   })
 
+  mongoose.connect(dbConfig.dbs, {
+    useNewUrlParser: true
+  })
   app.listen(port, host)
   console.log('Server listening on ' + host + ':' + port) // eslint-disable-line no-console
 }
